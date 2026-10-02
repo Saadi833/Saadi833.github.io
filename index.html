@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SAADI INSTITUTE OF DIGITAL SKILLS & TECHNOLOGY</title>
 
 <style>
@@ -71,84 +70,55 @@ nav a:hover{
 }
 
 .hero{
-  min-height:760px;
-  padding:70px 20px 90px;
+  min-height:780px;
+  padding:60px 20px 80px;
   text-align:center;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   background:
-    radial-gradient(circle at 50% 35%,rgba(247,196,58,.14),transparent 34%),
+    radial-gradient(circle at 50% 30%,rgba(247,196,58,.12),transparent 40%),
     linear-gradient(180deg,#080b14,#05070d);
   overflow:hidden;
 }
 
-/* CURVED INSTITUTE NAME */
-.arch{
-  width:min(95%,900px);
-  height:150px;
-  margin:auto;
-}
-
-.arch svg{
-  width:100%;
-  height:100%;
-  overflow:visible;
-}
-
-.arch text{
-  fill:#f7c43a;
-  font-size:28px;
+/* INSTITUTE NAME - STRAIGHT LINE */
+.institute-name{
+  color:#f7c43a;
+  font-size:clamp(20px, 3.8vw, 34px);
   font-weight:900;
   letter-spacing:1.5px;
-  text-shadow:0 0 15px rgba(247,196,58,.45);
+  text-shadow:0 0 18px rgba(247,196,58,.5);
+  margin-bottom:25px;
+  max-width:950px;
+  line-height:1.3;
 }
 
-/* LOGO */
-.logo-box{
-  width:135px;
-  height:135px;
-  border:3px solid #f7c43a;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:-10px auto 25px;
-  background:#090d17;
-  box-shadow:
-    0 0 20px rgba(247,196,58,.15),
-    inset 0 0 20px rgba(247,196,58,.05);
-  overflow:hidden;
+/* MAIN LOGO */
+.main-logo{
+  width:min(320px, 85vw);
+  margin:0 auto 28px;
+  filter:drop-shadow(0 0 25px rgba(247,196,58,.25));
+  transition:.3s;
 }
 
-.logo-box img{
+.main-logo:hover{
+  transform:scale(1.03);
+  filter:drop-shadow(0 0 35px rgba(247,196,58,.4));
+}
+
+.main-logo img{
   width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:50%;
-}
-
-.bitcoin{
-  width:88px;
-  height:88px;
-  border-radius:50%;
-  background:#f7c43a;
-  color:#111;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:52px;
-  font-weight:900;
-  box-shadow:0 0 35px rgba(247,196,58,.3);
-  margin-bottom:28px;
+  height:auto;
+  display:block;
 }
 
 .hero h1{
   max-width:1050px;
-  font-size:clamp(28px,5vw,54px);
+  font-size:clamp(26px,4.8vw,50px);
   line-height:1.15;
-  margin-bottom:20px;
+  margin-bottom:18px;
   color:#fff;
 }
 
@@ -159,8 +129,8 @@ nav a:hover{
 .hero p{
   max-width:850px;
   color:#bfc5d0;
-  font-size:18px;
-  margin-bottom:32px;
+  font-size:17px;
+  margin-bottom:30px;
 }
 
 .buttons{
@@ -222,8 +192,6 @@ section{
   color:#aeb5c2;
 }
 
-/* COURSES */
-
 .courses{
   background:#080b14;
 }
@@ -265,8 +233,6 @@ section{
   font-size:14px;
 }
 
-/* ABOUT */
-
 .about{
   background:#05070d;
 }
@@ -284,8 +250,6 @@ section{
   color:#c2c8d2;
   margin-bottom:16px;
 }
-
-/* WHY US */
 
 .features{
   display:grid;
@@ -310,8 +274,6 @@ section{
   color:#aeb5c2;
   font-size:14px;
 }
-
-/* CERTIFICATE */
 
 .certificate{
   background:#080b14;
@@ -364,8 +326,6 @@ section{
   color:#dce1e8;
 }
 
-/* CONTACT */
-
 .contact{
   background:#05070d;
 }
@@ -397,8 +357,6 @@ section{
   color:#adb4c1;
 }
 
-/* FOOTER */
-
 footer{
   background:#03050a;
   border-top:1px solid rgba(247,196,58,.15);
@@ -416,79 +374,46 @@ footer p{
   margin-top:7px;
 }
 
-/* MOBILE */
-
 @media(max-width:850px){
-
   .nav{
     flex-direction:column;
     padding:15px;
   }
-
   nav{
     gap:13px;
   }
-
   .course-grid{
     grid-template-columns:repeat(2,1fr);
   }
-
   .features{
     grid-template-columns:repeat(2,1fr);
   }
-
   .contact-grid{
     grid-template-columns:1fr;
   }
-
   .hero{
     min-height:700px;
-  }
-
-  .arch{
-    height:125px;
-  }
-
-  .arch text{
-    font-size:25px;
   }
 }
 
 @media(max-width:520px){
-
   .course-grid{
     grid-template-columns:1fr;
   }
-
   .features{
     grid-template-columns:1fr;
   }
-
   section{
     padding:65px 15px;
   }
-
-  .arch{
-    height:105px;
-  }
-
-  .arch text{
-    font-size:22px;
-  }
-
-  .logo-box{
-    width:110px;
-    height:110px;
-  }
-
-  .bitcoin{
-    width:75px;
-    height:75px;
-    font-size:44px;
-  }
-
   .hero p{
-    font-size:16px;
+    font-size:15px;
+  }
+  .institute-name{
+    font-size:18px;
+  }
+  .main-logo{
+    width:min(260px, 80vw);
   }
 }
 </style>
@@ -496,15 +421,9 @@ footer p{
 
 <body>
 
-<!-- HEADER -->
-
 <header>
   <div class="nav">
-
-    <div class="brand">
-      ₿ SAADI INSTITUTE
-    </div>
-
+    <div class="brand">₿ SAADI INSTITUTE</div>
     <nav>
       <a href="#home">Home</a>
       <a href="#courses">Courses</a>
@@ -512,54 +431,20 @@ footer p{
       <a href="#certificate">Certificate</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </div>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero" id="home">
 
-  <!-- CURVED NAME -->
-  <div class="arch">
-
-    <svg viewBox="0 0 900 180" aria-label="Saadi Institute">
-
-      <defs>
-        <path
-          id="archPath"
-          d="M 90 145 Q 450 5 810 145"
-          fill="none"
-        />
-      </defs>
-
-      <text>
-        <textPath
-          href="#archPath"
-          startOffset="50%"
-          text-anchor="middle"
-        >
-          SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
-        </textPath>
-      </text>
-
-    </svg>
-
+  <!-- INSTITUTE NAME - STRAIGHT LINE -->
+  <div class="institute-name">
+    SAADI INSTITUTE OF DIGITAL SKILLS & TECHNOLOGY
   </div>
 
-
-  <!-- LOGO -->
-  <div class="logo-box">
-    <img src="IMG-20260930-WA9530.jpg" alt="SAADI Institute Logo">
+  <!-- YOUR EXACT LOGO -->
+  <div class="main-logo">
+    <img src="logo.png" alt="SAADI Institute Logo">
   </div>
-
-
-  <!-- BITCOIN -->
-  <div class="bitcoin">
-    ₿
-  </div>
-
 
   <h1>
     Digital Skills <span>•</span>
@@ -568,456 +453,203 @@ footer p{
     Blockchain
   </h1>
 
-
   <p>
     Learn Digital Skills, Artificial Intelligence, Crypto Trading,
     Blockchain Technology and practical computer skills.
   </p>
 
-
   <div class="buttons">
-
-    <a href="#courses" class="btn btn-gold">
-      Explore Courses
-    </a>
-
-    <a href="#certificate" class="btn btn-outline">
-      Verify Certificate
-    </a>
-
+    <a href="#courses" class="btn btn-gold">Explore Courses</a>
+    <a href="#certificate" class="btn btn-outline">Verify Certificate</a>
   </div>
 
 </section>
 
-
-<!-- COURSES -->
-
 <section class="courses" id="courses">
-
   <div class="container">
-
-    <h2 class="section-title">
-      What We Teach
-    </h2>
-
-    <p class="section-subtitle">
-      Practical digital and technology education for modern learners.
-    </p>
-
+    <h2 class="section-title">What We Teach</h2>
+    <p class="section-subtitle">Practical digital and technology education for modern learners.</p>
 
     <div class="course-grid">
-
-
       <div class="course">
         <div class="icon">₿</div>
         <h3>Crypto Trading</h3>
-        <p>
-          Learn cryptocurrency trading fundamentals,
-          market concepts and exchange functions.
-        </p>
+        <p>Learn cryptocurrency trading fundamentals, market concepts and exchange functions.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">📊</div>
         <h3>Technical Analysis</h3>
-        <p>
-          Learn charts, support, resistance,
-          trends and technical analysis concepts.
-        </p>
+        <p>Learn charts, support, resistance, trends and technical analysis concepts.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">🕯️</div>
         <h3>Candlestick Analysis</h3>
-        <p>
-          Understand candlesticks, price action
-          and commonly studied patterns.
-        </p>
+        <p>Understand candlesticks, price action and commonly studied patterns.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">📈</div>
         <h3>Trading Indicators</h3>
-        <p>
-          Learn commonly used indicators and
-          how they are interpreted on charts.
-        </p>
+        <p>Learn commonly used indicators and how they are interpreted on charts.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">💱</div>
         <h3>Exchange Training</h3>
-        <p>
-          Learn basic exchange interfaces,
-          orders and account functions.
-        </p>
+        <p>Learn basic exchange interfaces, orders and account functions.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">🛡️</div>
         <h3>Risk Management</h3>
-        <p>
-          Learn basic concepts of responsible
-          trading and risk control.
-        </p>
+        <p>Learn basic concepts of responsible trading and risk control.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">🤖</div>
         <h3>Artificial Intelligence</h3>
-        <p>
-          Learn AI fundamentals, useful AI tools,
-          prompting and practical applications.
-        </p>
+        <p>Learn AI fundamentals, useful AI tools, prompting and practical applications.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">🧠</div>
         <h3>Advanced AI Skills</h3>
-        <p>
-          Explore advanced AI workflows,
-          productivity and digital applications.
-        </p>
+        <p>Explore advanced AI workflows, productivity and digital applications.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">⛓️</div>
         <h3>Blockchain Technology</h3>
-        <p>
-          Understand blockchain fundamentals,
-          digital ledgers and transactions.
-        </p>
+        <p>Understand blockchain fundamentals, digital ledgers and transactions.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">💻</div>
         <h3>Basic Computer</h3>
-        <p>
-          Learn essential computer skills for
-          study, work and everyday use.
-        </p>
+        <p>Learn essential computer skills for study, work and everyday use.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">📄</div>
         <h3>MS Office</h3>
-        <p>
-          Learn practical Word, Excel and
-          PowerPoint skills.
-        </p>
+        <p>Learn practical Word, Excel and PowerPoint skills.</p>
       </div>
-
-
       <div class="course">
         <div class="icon">🌐</div>
         <h3>Digital Skills</h3>
-        <p>
-          Develop practical digital skills for
-          modern education and work.
-        </p>
+        <p>Develop practical digital skills for modern education and work.</p>
       </div>
-
-
     </div>
-
   </div>
-
 </section>
-
-
-<!-- ABOUT -->
 
 <section class="about" id="about">
-
   <div class="container">
-
-    <h2 class="section-title">
-      About Our Institute
-    </h2>
-
-    <p class="section-subtitle">
-      Practical learning for today's digital world.
-    </p>
-
-
+    <h2 class="section-title">About Our Institute</h2>
+    <p class="section-subtitle">Practical learning for today's digital world.</p>
     <div class="about-card">
-
       <p>
-        <strong>
-          SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
-        </strong>
-        provides online learning in Digital Skills,
-        Artificial Intelligence, Crypto Trading,
+        <strong>SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY</strong>
+        provides online learning in Digital Skills, Artificial Intelligence, Crypto Trading,
         Blockchain Technology and Basic Computer skills.
       </p>
-
-      <p>
-        Our courses focus on practical knowledge and
-        easy-to-follow learning for students and learners.
-      </p>
-
-      <p>
-        We aim to help learners understand modern
-        technologies and develop useful digital skills.
-      </p>
-
+      <p>Our courses focus on practical knowledge and easy-to-follow learning for students and learners.</p>
+      <p>We aim to help learners understand modern technologies and develop useful digital skills.</p>
     </div>
-
   </div>
-
 </section>
 
-
-<!-- WHY LEARN -->
-
 <section>
-
   <div class="container">
-
-    <h2 class="section-title">
-      Why Learn With Us?
-    </h2>
-
-    <p class="section-subtitle">
-      Our learning approach focuses on practical,
-      understandable and useful digital education.
-    </p>
-
-
+    <h2 class="section-title">Why Learn With Us?</h2>
+    <p class="section-subtitle">Our learning approach focuses on practical, understandable and useful digital education.</p>
     <div class="features">
-
       <div class="feature">
         <div class="icon">🎓</div>
         <h3>Practical Learning</h3>
-        <p>
-          Focus on practical concepts and useful skills.
-        </p>
+        <p>Focus on practical concepts and useful skills.</p>
       </div>
-
-
       <div class="feature">
         <div class="icon">💻</div>
         <h3>Online Education</h3>
-        <p>
-          Learn digital skills from anywhere.
-        </p>
+        <p>Learn digital skills from anywhere.</p>
       </div>
-
-
       <div class="feature">
         <div class="icon">📚</div>
         <h3>Multiple Courses</h3>
-        <p>
-          AI, blockchain, crypto and digital skills.
-        </p>
+        <p>AI, blockchain, crypto and digital skills.</p>
       </div>
-
-
       <div class="feature">
         <div class="icon">🌐</div>
         <h3>Modern Skills</h3>
-        <p>
-          Skills related to today's digital world.
-        </p>
+        <p>Skills related to today's digital world.</p>
       </div>
-
     </div>
-
   </div>
-
 </section>
-
-
-<!-- CERTIFICATE -->
 
 <section class="certificate" id="certificate">
-
   <div class="container">
-
-    <h2 class="section-title">
-      Certificate Verification
-    </h2>
-
-    <p class="section-subtitle">
-      Enter your Certificate ID to check the certificate record.
-    </p>
-
-
+    <h2 class="section-title">Certificate Verification</h2>
+    <p class="section-subtitle">Enter your Certificate ID to check the certificate record.</p>
     <div class="verify">
-
-      <input
-        type="text"
-        id="certificateId"
-        placeholder="Example: SAADI-001"
-      >
-
-      <button onclick="verifyCertificate()">
-        Verify Certificate
-      </button>
-
+      <input type="text" id="certificateId" placeholder="Example: SAADI-001">
+      <button onclick="verifyCertificate()">Verify Certificate</button>
       <div class="result" id="verificationResult"></div>
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- CONTACT -->
-
 <section class="contact" id="contact">
-
   <div class="container">
-
-    <h2 class="section-title">
-      Contact Us
-    </h2>
-
-    <p class="section-subtitle">
-      Contact the institute for course information and enrollment.
-    </p>
-
-
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">Contact the institute for course information and enrollment.</p>
     <div class="contact-grid">
-
-
       <div class="contact-card">
         <div class="contact-icon">🎓</div>
         <h3>Online Classes</h3>
-        <p>
-          Learn from anywhere through online classes.
-        </p>
+        <p>Learn from anywhere through online classes.</p>
       </div>
-
-
       <div class="contact-card">
         <div class="contact-icon">📚</div>
         <h3>Our Courses</h3>
-        <p>
-          AI • Crypto • Blockchain • Digital Skills
-        </p>
+        <p>AI • Crypto • Blockchain • Digital Skills</p>
       </div>
-
-
       <div class="contact-card">
         <div class="contact-icon">📩</div>
         <h3>Admissions</h3>
-        <p>
-          Contact the institute for current
-          course and admission information.
-        </p>
+        <p>Contact the institute for current course and admission information.</p>
       </div>
-
-
     </div>
-
   </div>
-
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-  <p>
-    <strong>
-      SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
-    </strong>
-  </p>
-
-  <p>
-    Digital Skills • Artificial Intelligence •
-    Crypto Trading • Blockchain
-  </p>
-
-  <p>
-    © 2026 SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
-  </p>
-
+  <p><strong>SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY</strong></p>
+  <p>Digital Skills • Artificial Intelligence • Crypto Trading • Blockchain</p>
+  <p>© 2026 SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY</p>
 </footer>
 
-
-<!-- JAVASCRIPT -->
-
 <script>
-
 function verifyCertificate(){
-
-  const id =
-    document
-    .getElementById("certificateId")
-    .value
-    .trim()
-    .toUpperCase();
-
-  const result =
-    document.getElementById("verificationResult");
-
+  const id = document.getElementById("certificateId").value.trim().toUpperCase();
+  const result = document.getElementById("verificationResult");
 
   if(id === ""){
-
     result.style.display="block";
-
-    result.innerHTML =
-      "Please enter a Certificate ID.";
-
+    result.innerHTML = "Please enter a Certificate ID.";
     return;
   }
 
-
-  /*
-    DEMO CERTIFICATE
-
-    Later we can add your real certificates here.
-  */
-
   if(id === "SAADI-001"){
-
     result.style.display="block";
-
     result.innerHTML = `
-      <strong style="color:#f7c43a;">
-        Certificate Valid
-      </strong>
-      <br><br>
-      Student: Demo Student
-      <br>
-      Course: Crypto Trading Course
-      <br>
-      Certificate ID: SAADI-001
-      <br>
+      <strong style="color:#f7c43a;">Certificate Valid</strong><br><br>
+      Student: Demo Student<br>
+      Course: Crypto Trading Course<br>
+      Certificate ID: SAADI-001<br>
       Status: Valid
     `;
-
   }else{
-
     result.style.display="block";
-
     result.innerHTML = `
-      <strong>
-        Certificate Not Found
-      </strong>
-      <br><br>
-      Please check the Certificate ID
-      and try again.
+      <strong>Certificate Not Found</strong><br><br>
+      Please check the Certificate ID and try again.
     `;
-
   }
-
 }
-
 </script>
 
 </body>
