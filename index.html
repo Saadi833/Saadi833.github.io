@@ -4,429 +4,490 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Saadi Institute of Digital Skills & Technology</title>
+<title>SAADI INSTITUTE OF DIGITAL SKILLS & TECHNOLOGY</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #05070d;
-  color: #ffffff;
-  line-height: 1.6;
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#05070d;
+  color:#fff;
+  line-height:1.6;
 }
 
-/* ================= HEADER ================= */
-
-header {
-  background: #080b14;
-  border-bottom: 1px solid rgba(247,196,58,0.25);
-  padding: 18px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(5,7,13,.96);
+  border-bottom:1px solid rgba(247,196,58,.25);
+  backdrop-filter:blur(10px);
 }
 
-.nav-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  min-height:70px;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
-.logo {
-  color: #f7c43a;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 1px;
+.brand{
+  color:#f7c43a;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:1px;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+nav{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:.3s;
 }
 
-nav a:hover {
-  color: #f7c43a;
+nav a:hover{
+  color:#f7c43a;
 }
 
-/* ================= HERO ================= */
-
-.hero {
-  min-height: 720px;
-  padding: 70px 20px 90px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+.hero{
+  min-height:760px;
+  padding:70px 20px 90px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
   background:
-    radial-gradient(circle at center, rgba(247,196,58,0.10), transparent 40%),
-    linear-gradient(180deg, #080b14, #05070d);
+    radial-gradient(circle at 50% 35%,rgba(247,196,58,.14),transparent 34%),
+    linear-gradient(180deg,#080b14,#05070d);
+  overflow:hidden;
 }
 
-/* Real curved/arch title */
-
-.institute-arch {
-  width: min(95%, 850px);
-  margin: 0 auto 10px;
-  color: #f7c43a;
-  font-size: clamp(24px, 4vw, 42px);
-  font-weight: 900;
-  letter-spacing: 1.5px;
-  text-shadow: 0 0 15px rgba(247,196,58,0.35);
-
-  transform: perspective(500px) rotateX(-10deg);
+/* CURVED INSTITUTE NAME */
+.arch{
+  width:min(95%,900px);
+  height:150px;
+  margin:auto;
 }
 
-/* Logo placeholder */
-
-.logo-placeholder {
-  width: 125px;
-  height: 125px;
-  border: 3px solid #f7c43a;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px auto 30px;
-  color: #f7c43a;
-  font-weight: bold;
-  font-size: 18px;
-  background: #080b14;
-  box-shadow: 0 0 25px rgba(247,196,58,0.18);
+.arch svg{
+  width:100%;
+  height:100%;
+  overflow:visible;
 }
 
-.logo-placeholder span {
-  display: block;
+.arch text{
+  fill:#f7c43a;
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-shadow:0 0 15px rgba(247,196,58,.45);
 }
 
-.bitcoin {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: #f7c43a;
-  color: #111111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 55px;
-  font-weight: bold;
-  margin: 15px auto 25px;
-  box-shadow: 0 0 35px rgba(247,196,58,0.25);
+/* LOGO PLACEHOLDER */
+.logo-box{
+  width:135px;
+  height:135px;
+  border:3px solid #f7c43a;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:-10px auto 25px;
+  background:#090d17;
+  box-shadow:
+    0 0 20px rgba(247,196,58,.15),
+    inset 0 0 20px rgba(247,196,58,.05);
 }
 
-.hero h1 {
-  max-width: 1000px;
-  color: #ffffff;
-  font-size: clamp(28px, 5vw, 52px);
-  line-height: 1.15;
-  margin-bottom: 20px;
+.logo-box span{
+  color:#f7c43a;
+  font-weight:900;
+  font-size:18px;
+  line-height:1.2;
 }
 
-.hero p {
-  max-width: 850px;
-  color: #c7cbd5;
-  font-size: 18px;
-  margin-bottom: 30px;
+.bitcoin{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:#f7c43a;
+  color:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:52px;
+  font-weight:900;
+  box-shadow:0 0 35px rgba(247,196,58,.3);
+  margin-bottom:28px;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
+.hero h1{
+  max-width:1050px;
+  font-size:clamp(28px,5vw,54px);
+  line-height:1.15;
+  margin-bottom:20px;
+  color:#fff;
 }
 
-.btn {
-  display: inline-block;
-  padding: 13px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+.hero h1 span{
+  color:#f7c43a;
 }
 
-.btn-primary {
-  background: #f7c43a;
-  color: #111111;
+.hero p{
+  max-width:850px;
+  color:#bfc5d0;
+  font-size:18px;
+  margin-bottom:32px;
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(247,196,58,0.25);
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
 }
 
-.btn-secondary {
-  border: 1px solid #f7c43a;
-  color: #f7c43a;
+.btn{
+  display:inline-block;
+  padding:13px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:800;
+  transition:.3s;
 }
 
-.btn-secondary:hover {
-  background: #f7c43a;
-  color: #111111;
+.btn-gold{
+  background:#f7c43a;
+  color:#111;
 }
 
-/* ================= GENERAL ================= */
-
-section {
-  padding: 80px 20px;
+.btn-gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 25px rgba(247,196,58,.3);
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
+.btn-outline{
+  border:1px solid #f7c43a;
+  color:#f7c43a;
 }
 
-.section-title {
-  text-align: center;
-  color: #f7c43a;
-  font-size: 34px;
-  margin-bottom: 12px;
+.btn-outline:hover{
+  background:#f7c43a;
+  color:#111;
 }
 
-.section-subtitle {
-  text-align: center;
-  color: #aeb4c0;
-  max-width: 750px;
-  margin: 0 auto 45px;
+section{
+  padding:85px 20px;
 }
 
-/* ================= COURSES ================= */
-
-.courses {
-  background: #080b14;
+.container{
+  max-width:1200px;
+  margin:auto;
 }
 
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+.section-title{
+  text-align:center;
+  color:#f7c43a;
+  font-size:36px;
+  margin-bottom:12px;
 }
 
-.course-card {
-  background: #101521;
-  border: 1px solid rgba(247,196,58,0.18);
-  border-radius: 14px;
-  padding: 28px 22px;
-  text-align: center;
-  transition: 0.3s;
+.section-subtitle{
+  max-width:780px;
+  margin:0 auto 45px;
+  text-align:center;
+  color:#aeb5c2;
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  border-color: #f7c43a;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+/* COURSES */
+
+.courses{
+  background:#080b14;
 }
 
-.course-icon {
-  font-size: 38px;
-  margin-bottom: 12px;
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.course-card h3 {
-  color: #f7c43a;
-  margin-bottom: 10px;
-  font-size: 21px;
+.course{
+  background:linear-gradient(145deg,#111724,#0b0f18);
+  border:1px solid rgba(247,196,58,.16);
+  border-radius:15px;
+  padding:30px 22px;
+  text-align:center;
+  transition:.3s;
 }
 
-.course-card p {
-  color: #b9bec8;
-  font-size: 14px;
+.course:hover{
+  transform:translateY(-7px);
+  border-color:#f7c43a;
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
 
-/* ================= ABOUT ================= */
-
-.about {
-  background: #05070d;
+.icon{
+  font-size:40px;
+  margin-bottom:12px;
 }
 
-.about-box {
-  max-width: 900px;
-  margin: auto;
-  background: #101521;
-  border-left: 4px solid #f7c43a;
-  padding: 30px;
-  border-radius: 10px;
+.course h3{
+  color:#f7c43a;
+  margin-bottom:10px;
+  font-size:21px;
 }
 
-.about-box p {
-  color: #c7cbd5;
-  margin-bottom: 15px;
+.course p{
+  color:#adb4c1;
+  font-size:14px;
 }
 
-/* ================= CERTIFICATE ================= */
+/* ABOUT */
 
-.certificate {
-  background: #080b14;
+.about{
+  background:#05070d;
 }
 
-.verify-box {
-  max-width: 600px;
-  margin: auto;
-  background: #101521;
-  padding: 35px;
-  border-radius: 14px;
-  border: 1px solid rgba(247,196,58,0.2);
-  text-align: center;
+.about-card{
+  max-width:900px;
+  margin:auto;
+  background:#101621;
+  border-left:4px solid #f7c43a;
+  border-radius:10px;
+  padding:35px;
 }
 
-.verify-box input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 7px;
-  border: 1px solid #3a4050;
-  background: #070a11;
-  color: white;
-  margin: 18px 0 12px;
-  font-size: 16px;
-  outline: none;
+.about-card p{
+  color:#c2c8d2;
+  margin-bottom:16px;
 }
 
-.verify-box input:focus {
-  border-color: #f7c43a;
+/* WHY US */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
 }
 
-.verify-btn {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 7px;
-  background: #f7c43a;
-  color: #111111;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+.feature{
+  background:#101621;
+  border:1px solid rgba(247,196,58,.14);
+  padding:25px 18px;
+  border-radius:12px;
+  text-align:center;
 }
 
-.result {
-  margin-top: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  display: none;
+.feature h3{
+  color:#f7c43a;
+  margin:10px 0;
 }
 
-/* ================= CONTACT ================= */
-
-.contact {
-  background: #05070d;
+.feature p{
+  color:#aeb5c2;
+  font-size:14px;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+/* CERTIFICATE */
+
+.certificate{
+  background:#080b14;
 }
 
-.contact-card {
-  background: #101521;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
-  border: 1px solid rgba(247,196,58,0.15);
+.verify{
+  max-width:650px;
+  margin:auto;
+  background:#101621;
+  border:1px solid rgba(247,196,58,.2);
+  border-radius:15px;
+  padding:35px;
+  text-align:center;
 }
 
-.contact-card h3 {
-  color: #f7c43a;
-  margin-bottom: 10px;
+.verify input{
+  width:100%;
+  padding:15px;
+  margin:20px 0 12px;
+  background:#060910;
+  border:1px solid #3b4352;
+  border-radius:7px;
+  color:#fff;
+  font-size:16px;
+  outline:none;
 }
 
-.contact-card p {
-  color: #b9bec8;
+.verify input:focus{
+  border-color:#f7c43a;
 }
 
-/* ================= FOOTER ================= */
-
-footer {
-  background: #03050a;
-  border-top: 1px solid rgba(247,196,58,0.15);
-  text-align: center;
-  padding: 30px 20px;
+.verify button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:7px;
+  background:#f7c43a;
+  color:#111;
+  font-size:16px;
+  font-weight:900;
+  cursor:pointer;
 }
 
-footer strong {
-  color: #f7c43a;
+.result{
+  display:none;
+  margin-top:20px;
+  padding:18px;
+  border-radius:8px;
+  background:#090d16;
+  color:#dce1e8;
 }
 
-footer p {
-  color: #858b98;
-  margin-top: 8px;
-  font-size: 14px;
+/* CONTACT */
+
+.contact{
+  background:#05070d;
 }
 
-/* ================= MOBILE ================= */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
 
-@media (max-width: 800px) {
+.contact-card{
+  background:#101621;
+  border:1px solid rgba(247,196,58,.15);
+  border-radius:12px;
+  padding:30px 20px;
+  text-align:center;
+}
 
-  .nav-container {
-    flex-direction: column;
+.contact-card .contact-icon{
+  font-size:35px;
+}
+
+.contact-card h3{
+  color:#f7c43a;
+  margin:10px 0;
+}
+
+.contact-card p{
+  color:#adb4c1;
+}
+
+/* FOOTER */
+
+footer{
+  background:#03050a;
+  border-top:1px solid rgba(247,196,58,.15);
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer strong{
+  color:#f7c43a;
+}
+
+footer p{
+  color:#858c99;
+  font-size:14px;
+  margin-top:7px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .nav{
+    flex-direction:column;
+    padding:15px;
   }
 
-  nav {
-    gap: 12px;
+  nav{
+    gap:13px;
   }
 
-  .course-grid {
-    grid-template-columns: 1fr 1fr;
+  .course-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .features{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .hero {
-    min-height: 650px;
-    padding-top: 55px;
+  .contact-grid{
+    grid-template-columns:1fr;
   }
 
-  .hero p {
-    font-size: 16px;
+  .hero{
+    min-height:700px;
+  }
+
+  .arch{
+    height:125px;
+  }
+
+  .arch text{
+    font-size:25px;
   }
 }
 
-@media (max-width: 520px) {
+@media(max-width:520px){
 
-  .course-grid {
-    grid-template-columns: 1fr;
+  .course-grid{
+    grid-template-columns:1fr;
   }
 
-  .institute-arch {
-    font-size: 22px;
+  .features{
+    grid-template-columns:1fr;
   }
 
-  .logo-placeholder {
-    width: 105px;
-    height: 105px;
+  section{
+    padding:65px 15px;
   }
 
-  .bitcoin {
-    width: 75px;
-    height: 75px;
-    font-size: 45px;
+  .arch{
+    height:105px;
   }
 
-  section {
-    padding: 60px 15px;
+  .arch text{
+    font-size:22px;
+  }
+
+  .logo-box{
+    width:110px;
+    height:110px;
+  }
+
+  .bitcoin{
+    width:75px;
+    height:75px;
+    font-size:44px;
+  }
+
+  .hero p{
+    font-size:16px;
   }
 }
 </style>
@@ -434,12 +495,12 @@ footer p {
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
 <header>
-  <div class="nav-container">
+  <div class="nav">
 
-    <div class="logo">
+    <div class="brand">
       ₿ SAADI INSTITUTE
     </div>
 
@@ -455,116 +516,162 @@ footer p {
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-  <div class="institute-arch">
-    SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
+  <!-- CURVED NAME -->
+  <div class="arch">
+
+    <svg viewBox="0 0 900 180" aria-label="Saadi Institute">
+
+      <defs>
+        <path
+          id="archPath"
+          d="M 90 145 Q 450 5 810 145"
+          fill="none"
+        />
+      </defs>
+
+      <text>
+        <textPath
+          href="#archPath"
+          startOffset="50%"
+          text-anchor="middle"
+        >
+          SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
+        </textPath>
+      </text>
+
+    </svg>
+
   </div>
 
-  <!-- Logo will be added here later -->
-  <div class="logo-placeholder">
-    <span>SAADI<br>LOGO</span>
+
+  <!-- LOGO PLACEHOLDER -->
+  <div class="logo-box">
+    <span>
+      SAADI<br>
+      LOGO
+    </span>
   </div>
 
+
+  <!-- BITCOIN -->
   <div class="bitcoin">
     ₿
   </div>
 
+
   <h1>
-    Digital Skills • Artificial Intelligence • Crypto Trading • Blockchain
+    Digital Skills <span>•</span>
+    Artificial Intelligence <span>•</span>
+    Crypto Trading <span>•</span>
+    Blockchain
   </h1>
+
 
   <p>
     Learn Digital Skills, Artificial Intelligence, Crypto Trading,
     Blockchain Technology and practical computer skills.
   </p>
 
-  <div class="hero-buttons">
-    <a href="#courses" class="btn btn-primary">
+
+  <div class="buttons">
+
+    <a href="#courses" class="btn btn-gold">
       Explore Courses
     </a>
 
-    <a href="#certificate" class="btn btn-secondary">
+    <a href="#certificate" class="btn btn-outline">
       Verify Certificate
     </a>
+
   </div>
 
 </section>
 
 
-<!-- ================= COURSES ================= -->
+<!-- COURSES -->
 
 <section class="courses" id="courses">
 
   <div class="container">
 
-    <h2 class="section-title">What We Teach</h2>
+    <h2 class="section-title">
+      What We Teach
+    </h2>
 
     <p class="section-subtitle">
-      Practical digital and technology skills designed for beginners
-      and learners who want to develop useful modern skills.
+      Practical digital and technology education for modern learners.
     </p>
+
 
     <div class="course-grid">
 
-      <div class="course-card">
-        <div class="course-icon">₿</div>
+
+      <div class="course">
+        <div class="icon">₿</div>
         <h3>Crypto Trading</h3>
         <p>
-          Learn the fundamentals of cryptocurrency markets,
-          trading concepts and practical exchange functions.
+          Learn cryptocurrency trading fundamentals,
+          market concepts and exchange functions.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">📊</div>
+
+      <div class="course">
+        <div class="icon">📊</div>
         <h3>Technical Analysis</h3>
         <p>
-          Learn charts, market structure, support, resistance
-          and technical analysis concepts.
+          Learn charts, support, resistance,
+          trends and technical analysis concepts.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">🕯️</div>
+
+      <div class="course">
+        <div class="icon">🕯️</div>
         <h3>Candlestick Analysis</h3>
         <p>
-          Understand candlestick patterns and how traders
-          use price action information.
+          Understand candlesticks, price action
+          and commonly studied patterns.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">📈</div>
+
+      <div class="course">
+        <div class="icon">📈</div>
         <h3>Trading Indicators</h3>
         <p>
-          Learn commonly used trading indicators and how
-          they can be interpreted on charts.
+          Learn commonly used indicators and
+          how they are interpreted on charts.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">💱</div>
+
+      <div class="course">
+        <div class="icon">💱</div>
         <h3>Exchange Training</h3>
         <p>
-          Learn basic exchange functions, trading interfaces,
-          orders and account features.
+          Learn basic exchange interfaces,
+          orders and account functions.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">🛡️</div>
+
+      <div class="course">
+        <div class="icon">🛡️</div>
         <h3>Risk Management</h3>
         <p>
-          Learn basic concepts of position sizing,
-          risk control and responsible trading practices.
+          Learn basic concepts of responsible
+          trading and risk control.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">🤖</div>
+
+      <div class="course">
+        <div class="icon">🤖</div>
         <h3>Artificial Intelligence</h3>
         <p>
           Learn AI fundamentals, useful AI tools,
@@ -572,50 +679,56 @@ footer p {
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">🧠</div>
+
+      <div class="course">
+        <div class="icon">🧠</div>
         <h3>Advanced AI Skills</h3>
         <p>
-          Explore advanced AI workflows, productivity tools
-          and practical digital applications.
+          Explore advanced AI workflows,
+          productivity and digital applications.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">⛓️</div>
+
+      <div class="course">
+        <div class="icon">⛓️</div>
         <h3>Blockchain Technology</h3>
         <p>
-          Understand blockchain fundamentals, digital ledgers,
-          transactions and related technologies.
+          Understand blockchain fundamentals,
+          digital ledgers and transactions.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">💻</div>
+
+      <div class="course">
+        <div class="icon">💻</div>
         <h3>Basic Computer</h3>
         <p>
-          Learn essential computer skills for everyday
-          study, work and digital activities.
+          Learn essential computer skills for
+          study, work and everyday use.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">📄</div>
+
+      <div class="course">
+        <div class="icon">📄</div>
         <h3>MS Office</h3>
         <p>
-          Learn practical Microsoft Word, Excel and
+          Learn practical Word, Excel and
           PowerPoint skills.
         </p>
       </div>
 
-      <div class="course-card">
-        <div class="course-icon">🌐</div>
+
+      <div class="course">
+        <div class="icon">🌐</div>
         <h3>Digital Skills</h3>
         <p>
-          Develop practical digital skills for modern
-          education, work and online activities.
+          Develop practical digital skills for
+          modern education and work.
         </p>
       </div>
+
 
     </div>
 
@@ -624,36 +737,40 @@ footer p {
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
   <div class="container">
 
-    <h2 class="section-title">About Our Institute</h2>
+    <h2 class="section-title">
+      About Our Institute
+    </h2>
 
     <p class="section-subtitle">
       Practical learning for today's digital world.
     </p>
 
-    <div class="about-box">
+
+    <div class="about-card">
 
       <p>
-        <strong>SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY</strong>
-        provides online learning in digital skills, artificial
-        intelligence, crypto trading, blockchain technology and
-        basic computer skills.
+        <strong>
+          SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
+        </strong>
+        provides online learning in Digital Skills,
+        Artificial Intelligence, Crypto Trading,
+        Blockchain Technology and Basic Computer skills.
       </p>
 
       <p>
-        Our courses are designed to help learners understand
-        modern technologies through practical and easy-to-follow
-        learning.
+        Our courses focus on practical knowledge and
+        easy-to-follow learning for students and learners.
       </p>
 
       <p>
-        We focus on education, practical knowledge and responsible
-        use of digital technologies.
+        We aim to help learners understand modern
+        technologies and develop useful digital skills.
       </p>
 
     </div>
@@ -663,7 +780,67 @@ footer p {
 </section>
 
 
-<!-- ================= CERTIFICATE VERIFICATION ================= -->
+<!-- WHY LEARN -->
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Why Learn With Us?
+    </h2>
+
+    <p class="section-subtitle">
+      Our learning approach focuses on practical,
+      understandable and useful digital education.
+    </p>
+
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="icon">🎓</div>
+        <h3>Practical Learning</h3>
+        <p>
+          Focus on practical concepts and useful skills.
+        </p>
+      </div>
+
+
+      <div class="feature">
+        <div class="icon">💻</div>
+        <h3>Online Education</h3>
+        <p>
+          Learn digital skills from anywhere.
+        </p>
+      </div>
+
+
+      <div class="feature">
+        <div class="icon">📚</div>
+        <h3>Multiple Courses</h3>
+        <p>
+          AI, blockchain, crypto and digital skills.
+        </p>
+      </div>
+
+
+      <div class="feature">
+        <div class="icon">🌐</div>
+        <h3>Modern Skills</h3>
+        <p>
+          Skills related to today's digital world.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CERTIFICATE -->
 
 <section class="certificate" id="certificate">
 
@@ -677,7 +854,8 @@ footer p {
       Enter your Certificate ID to check the certificate record.
     </p>
 
-    <div class="verify-box">
+
+    <div class="verify">
 
       <input
         type="text"
@@ -685,7 +863,7 @@ footer p {
         placeholder="Example: SAADI-001"
       >
 
-      <button class="verify-btn" onclick="verifyCertificate()">
+      <button onclick="verifyCertificate()">
         Verify Certificate
       </button>
 
@@ -698,7 +876,7 @@ footer p {
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -712,29 +890,37 @@ footer p {
       Contact the institute for course information and enrollment.
     </p>
 
+
     <div class="contact-grid">
 
+
       <div class="contact-card">
+        <div class="contact-icon">🎓</div>
         <h3>Online Classes</h3>
         <p>
           Learn from anywhere through online classes.
         </p>
       </div>
 
+
       <div class="contact-card">
-        <h3>Courses</h3>
+        <div class="contact-icon">📚</div>
+        <h3>Our Courses</h3>
         <p>
-          AI • Crypto Trading • Blockchain • Digital Skills
+          AI • Crypto • Blockchain • Digital Skills
         </p>
       </div>
 
+
       <div class="contact-card">
+        <div class="contact-icon">📩</div>
         <h3>Admissions</h3>
         <p>
-          Contact the institute for current course
-          and admission information.
+          Contact the institute for current
+          course and admission information.
         </p>
       </div>
+
 
     </div>
 
@@ -743,7 +929,7 @@ footer p {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -754,64 +940,82 @@ footer p {
   </p>
 
   <p>
-    Digital Skills • Artificial Intelligence • Crypto Trading • Blockchain
+    Digital Skills • Artificial Intelligence •
+    Crypto Trading • Blockchain
   </p>
 
   <p>
-    © 2026 Saadi Institute of Digital Skills &amp; Technology
+    © 2026 SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY
   </p>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
-function verifyCertificate() {
+function verifyCertificate(){
 
-  const certificateId =
-    document.getElementById("certificateId").value
+  const id =
+    document
+    .getElementById("certificateId")
+    .value
     .trim()
     .toUpperCase();
 
   const result =
     document.getElementById("verificationResult");
 
-  if (certificateId === "SAADI-001") {
 
-    result.style.display = "block";
+  if(id === ""){
+
+    result.style.display="block";
+
+    result.innerHTML =
+      "Please enter a Certificate ID.";
+
+    return;
+  }
+
+
+  /*
+    DEMO CERTIFICATE
+
+    Later we can add your real certificates here.
+  */
+
+  if(id === "SAADI-001"){
+
+    result.style.display="block";
 
     result.innerHTML = `
-      <strong>Certificate Valid</strong><br><br>
-      Student: Demo Student<br>
-      Course: Crypto Trading Course<br>
-      Certificate ID: SAADI-001<br>
+      <strong style="color:#f7c43a;">
+        Certificate Valid
+      </strong>
+      <br><br>
+      Student: Demo Student
+      <br>
+      Course: Crypto Trading Course
+      <br>
+      Certificate ID: SAADI-001
+      <br>
       Status: Valid
     `;
 
-    result.style.border = "1px solid #f7c43a";
+  }else{
 
-  } else if (certificateId === "") {
-
-    result.style.display = "block";
+    result.style.display="block";
 
     result.innerHTML = `
-      Please enter a Certificate ID.
+      <strong>
+        Certificate Not Found
+      </strong>
+      <br><br>
+      Please check the Certificate ID
+      and try again.
     `;
 
-    result.style.border = "1px solid #777";
-
-  } else {
-
-    result.style.display = "block";
-
-    result.innerHTML = `
-      <strong>Certificate Not Found</strong><br>
-      Please check the Certificate ID and try again.
-    `;
-
-    result.style.border = "1px solid #777";
   }
 
 }
