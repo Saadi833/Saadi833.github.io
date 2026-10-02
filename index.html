@@ -83,7 +83,6 @@ nav a:hover{
   overflow:hidden;
 }
 
-/* INSTITUTE NAME - STRAIGHT LINE */
 .institute-name{
   color:#f7c43a;
   font-size:clamp(20px, 3.8vw, 34px);
@@ -95,7 +94,6 @@ nav a:hover{
   line-height:1.3;
 }
 
-/* MAIN LOGO */
 .main-logo{
   width:min(320px, 85vw);
   margin:0 auto 28px;
@@ -324,6 +322,8 @@ section{
   border-radius:8px;
   background:#090d16;
   color:#dce1e8;
+  text-align:left;
+  line-height:1.9;
 }
 
 .contact{
@@ -421,6 +421,7 @@ footer p{
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="brand">₿ SAADI INSTITUTE</div>
@@ -434,14 +435,13 @@ footer p{
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="home">
 
-  <!-- INSTITUTE NAME - STRAIGHT LINE -->
   <div class="institute-name">
     SAADI INSTITUTE OF DIGITAL SKILLS & TECHNOLOGY
   </div>
 
-  <!-- YOUR EXACT LOGO -->
   <div class="main-logo">
     <img src="logo.png" alt="SAADI Institute Logo">
   </div>
@@ -465,6 +465,7 @@ footer p{
 
 </section>
 
+<!-- COURSES -->
 <section class="courses" id="courses">
   <div class="container">
     <h2 class="section-title">What We Teach</h2>
@@ -535,6 +536,7 @@ footer p{
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="container">
     <h2 class="section-title">About Our Institute</h2>
@@ -551,6 +553,7 @@ footer p{
   </div>
 </section>
 
+<!-- WHY LEARN -->
 <section>
   <div class="container">
     <h2 class="section-title">Why Learn With Us?</h2>
@@ -580,18 +583,25 @@ footer p{
   </div>
 </section>
 
+<!-- CERTIFICATE -->
 <section class="certificate" id="certificate">
   <div class="container">
     <h2 class="section-title">Certificate Verification</h2>
-    <p class="section-subtitle">Enter your Certificate ID to check the certificate record.</p>
+    <p class="section-subtitle">Enter Student Name or Certificate ID to check the certificate record.</p>
+
     <div class="verify">
-      <input type="text" id="certificateId" placeholder="Example: SAADI-001">
+      <input
+        type="text"
+        id="certificateId"
+        placeholder="Enter Student Name or Certificate ID"
+      >
       <button onclick="verifyCertificate()">Verify Certificate</button>
       <div class="result" id="verificationResult"></div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="section-title">Contact Us</h2>
@@ -616,40 +626,128 @@ footer p{
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p><strong>SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY</strong></p>
   <p>Digital Skills • Artificial Intelligence • Crypto Trading • Blockchain</p>
   <p>© 2026 SAADI INSTITUTE OF DIGITAL SKILLS &amp; TECHNOLOGY</p>
 </footer>
 
+<!-- JAVASCRIPT -->
 <script>
-function verifyCertificate(){
-  const id = document.getElementById("certificateId").value.trim().toUpperCase();
-  const result = document.getElementById("verificationResult");
 
-  if(id === ""){
-    result.style.display="block";
-    result.innerHTML = "Please enter a Certificate ID.";
+function verifyCertificate(){
+
+  const input =
+    document
+    .getElementById("certificateId")
+    .value
+    .trim()
+    .toLowerCase();
+
+  const result =
+    document.getElementById("verificationResult");
+
+
+  if(input === ""){
+    result.style.display = "block";
+    result.innerHTML = "Please enter Student Name or Certificate ID.";
     return;
   }
 
-  if(id === "SAADI-001"){
-    result.style.display="block";
+
+  // ===== STUDENTS DATABASE =====
+  const certificates = [
+
+    {
+      id: "SAADI-001",
+      name: "Asfandyar",
+      fatherName: "Muhammad Khan",
+      course: "Crypto Trading",
+      dateIssued: "15 March 2026",
+      duration: "Three Months",
+      status: "Valid"
+    },
+
+    {
+      id: "SAADI-002",
+      name: "Ali Khan",
+      fatherName: "Ahmed Khan",
+      course: "Artificial Intelligence",
+      dateIssued: "20 March 2026",
+      duration: "Three Months",
+      status: "Valid"
+    },
+
+    {
+      id: "SAADI-003",
+      name: "Sara Ahmed",
+      fatherName: "Imran Ahmed",
+      course: "Blockchain Technology",
+      dateIssued: "25 March 2026",
+      duration: "Three Months",
+      status: "Valid"
+    }
+
+    // نیا طالب علم ایڈ کرنے کے لیے نیچے کاپی کریں:
+    // {
+    //   id: "SAADI-004",
+    //   name: "Student Name",
+    //   fatherName: "Father Name",
+    //   course: "Course Name",
+    //   dateIssued: "01 April 2026",
+    //   duration: "Three Months",
+    //   status: "Valid"
+    // },
+
+  ];
+
+
+  // ===== SEARCH =====
+  const found = certificates.find(function(cert){
+    return (
+      cert.id.toLowerCase() === input ||
+      cert.name.toLowerCase() === input ||
+      cert.name.toLowerCase().includes(input) ||
+      cert.fatherName.toLowerCase().includes(input)
+    );
+  });
+
+
+  if(found){
+
+    result.style.display = "block";
+
     result.innerHTML = `
-      <strong style="color:#f7c43a;">Certificate Valid</strong><br><br>
-      Student: Demo Student<br>
-      Course: Crypto Trading Course<br>
-      Certificate ID: SAADI-001<br>
-      Status: Valid
+      <strong style="color:#f7c43a; font-size:18px;">
+        ✓ Certificate Valid
+      </strong>
+      <br><br>
+      <b>Student Name:</b> ${found.name}<br>
+      <b>Father Name:</b> ${found.fatherName}<br>
+      <b>Course:</b> ${found.course}<br>
+      <b>Certificate ID:</b> ${found.id}<br>
+      <b>Date Issued:</b> ${found.dateIssued}<br>
+      <b>Course Duration:</b> ${found.duration}<br>
+      <b>Status:</b> ${found.status}
     `;
+
   }else{
-    result.style.display="block";
+
+    result.style.display = "block";
+
     result.innerHTML = `
-      <strong>Certificate Not Found</strong><br><br>
-      Please check the Certificate ID and try again.
+      <strong style="color:#ff6b6b;">
+        Certificate Not Found
+      </strong>
+      <br><br>
+      Please check the Name or Certificate ID and try again.
     `;
+
   }
+
 }
+
 </script>
 
 </body>
